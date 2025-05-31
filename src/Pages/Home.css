@@ -22,7 +22,7 @@ html {
 .Bg-Image {
   width: 100vw;
   height: 100vh;
-  background-image: url('./public/Images/Bg.jpg');
+  background-image: url('/Images/Bg.jpg');
   background-size: cover;
   background-position: center;
   position: relative;
