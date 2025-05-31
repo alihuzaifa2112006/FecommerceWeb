@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.ContactSection {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.leftSide {
+  flex: 1;
+  min-width: 300px;
+  background-image: url('https://shorturl.at/B7Ky1');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeInLeft 1s ease forwards;
+  filter: brightness(0.85);
+}
+
+.leftSide::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 100, 0, 0.25);
+  z-index: 0;
+}
+
+.overlayBox {
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.25);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  padding: 30px;
+  border-radius: 16px;
+  color: #fff;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  transition: all 0.4s ease;
+  animation: fadeInUp 1.3s ease forwards;
+}
+
+.overlayBox:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.overlayBox h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.overlayBox p {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.rightSide {
+  flex: 1;
+  min-width: 300px;
+  background-color: #f0f4f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  animation: fadeInRight 1s ease forwards;
+}
+
+.contactForm {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contactForm h3 {
+  font-size: 2rem;
+  color: #2e7d32;
+  font-weight: 600;
+  text-align: center;
+}
+
+.contactForm input,
+.contactForm textarea {
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #ffffff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  outline: none;
+  transform: scale(1.02);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.contactForm button {
+  padding: 14px;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.contactForm button:hover {
+  background-color: #256d27;
+  transform: scale(1.05);
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1024px) {
+  .ContactSection {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .leftSide,
+  .rightSide {
+    min-width: 100%;
+    height: auto;
+  }
+
+  .rightSide {
+    padding: 30px;
+  }
+
+  .overlayBox {
+    padding: 25px;
+  }
+
+  .overlayBox h2 {
+    font-size: 2.2rem;
+  }
+
+  .overlayBox p {
+    font-size: 1.1rem;
+  }
+
+  .contactForm h3 {
+    font-size: 1.8rem;
+  }
+
+  .contactForm input,
+  .contactForm textarea {
+    font-size: 1rem;
+  }
+
+  .contactForm button {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .overlayBox {
+    padding: 20px;
+  }
+
+  .overlayBox h2 {
+    font-size: 1.8rem;
+  }
+
+  .overlayBox p {
+    font-size: 1rem;
+  }
+
+  .contactForm h3 {
+    font-size: 1.5rem;
+  }
+
+  .contactForm input,
+  .contactForm textarea {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  .contactForm button {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .overlayBox h2 {
+    font-size: 1.5rem;
+  }
+
+  .overlayBox p {
+    font-size: 0.95rem;
+  }
+
+  .contactForm h3 {
+    font-size: 1.3rem;
+  }
+
+  .contactForm input,
+  .contactForm textarea {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .contactForm button {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .overlayBox h2 {
+    font-size: 1.3rem;
+  }
+
+  .overlayBox p {
+    font-size: 0.85rem;
+  }
+
+  .contactForm h3 {
+    font-size: 1.2rem;
+  }
+
+  .contactForm input,
+  .contactForm textarea {
+    font-size: 0.85rem;
+  }
+
+  .contactForm button {
+    font-size: 0.9rem;
+  }
+}

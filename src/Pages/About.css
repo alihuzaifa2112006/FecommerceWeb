@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.aboutSection {
+  width: 100vw;
+  min-height: 100vh;
+  background: #f4f9f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
+
+.boxes1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.leftBox {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.leftBox h2 {
+  font-size: 2.5rem;
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-weight: 500;
+  color: #4caf50;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.leftBox p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.signature {
+  font-family: 'Great Vibes', cursive;
+  font-size: 35px;
+  color: #2e7d32;
+  padding-left: 10px;
+  border-left: 3px solid #2e7d32;
+  width: fit-content;
+  user-select: none;
+}
+
+.rightBox {
+  flex: 1;
+  min-width: 280px;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+.rightBox img {
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}

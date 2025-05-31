@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
+
+body {
+  scroll-behavior: smooth;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.MainSection {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  background-color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  padding: 20px;
+  margin: 0 auto;
+  height: auto;
+}
+
+.container p {
+  font-size: clamp(14px, 2vw, 15px);
+  color: #979393;
+  word-spacing: 1px;
+  line-height: 1.5;
+}
+
+.navBar {
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 20px 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.navItem {
+  text-decoration: none;
+  color: #535353;
+  font-weight: 600;
+  font-size: clamp(14px, 2vw, 16px);
+  padding: 15px 10px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  white-space: nowrap;
+  box-sizing: border-box;
+  flex-shrink: 1;
+  max-width: 100%;
+}
+
+.navItem:active {
+  color: black;
+}
+
+@media (max-width: 480px) {
+  .navBar {
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  .navItem {
+    font-size: 14px;
+    padding: 10px 8px;
+    margin-top: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .MainSection {
+    padding: 30px 40px;
+  }
+
+  .container {
+    padding: 30px 40px;
+    border-radius: 50px 50px 0 0;
+  }
+
+  .navBar {
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .navItem {
+    padding: 30px 14px;
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 40px;
+  }
+
+  .navItem {
+    padding: 40px 14px;
+    margin-top: 40px;
+  }
+}

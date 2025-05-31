@@ -1,0 +1,45 @@
+.SearchBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+  padding: 5px 10px;
+}
+
+.UserInput {
+  flex: 1; 
+}
+
+.UserInput input {
+  width: 100%;
+  height: 30px;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  font-size: 14px;
+  border-bottom: 1px solid rgb(87, 85, 85);
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.SearchBox > svg {
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .SearchBox {
+    flex-direction: row;  
+    align-items: center; 
+    gap: 6px;
+  }
+
+  .UserInput {
+    flex: 1;
+  }
+
+  .SearchBox > svg {
+    align-self: center;
+  }
+}

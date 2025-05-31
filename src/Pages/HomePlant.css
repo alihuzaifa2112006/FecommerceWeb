@@ -1,0 +1,38 @@
+.Cards {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 30px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.row1,
+.row2 {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+  width: 100%;
+  justify-content: center; 
+}
+
+.row1 > *,
+.row2 > * {
+  flex: 1 1 calc((100% / 3) - 13.33px); 
+  max-width: calc((100% / 3) - 13.33px);
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .row1,
+  .row2 {
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .row1 > *,
+  .row2 > * {
+    flex: none;
+    max-width: 100%;
+  }
+}

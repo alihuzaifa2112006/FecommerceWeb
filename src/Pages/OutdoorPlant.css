@@ -1,0 +1,12 @@
+.outdoorPlant {
+  display: flex;
+  gap: 40px;
+  flex-wrap: nowrap;
+}
+
+@media (max-width: 768px) {
+  .outdoorPlant {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
